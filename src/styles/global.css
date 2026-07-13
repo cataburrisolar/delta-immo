@@ -22,9 +22,9 @@
   --font-heading: "Nunito Sans", ui-sans-serif, system-ui, sans-serif;
   --font-body: "Montserrat", ui-sans-serif, system-ui, sans-serif;
 
-  /* Radii */
-  --radius-btn: 8px;
-  --radius-card: 12px;
+  /* Radii — near-square (see brand "avoid bubble" note, taken further) */
+  --radius-btn: 2px;
+  --radius-card: 2px;
 
   /* Soft, subtle shadow (avoid heavy floating shadows) */
   --shadow-soft: 0 8px 30px rgba(0, 0, 0, 0.08);

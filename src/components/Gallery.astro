@@ -11,19 +11,19 @@ const c = getTranslations(lang).gallery;
 
 const galleryImages = [
   {
-    src: '/properties/Image_4.png',
+    src: '/properties/Image_5.png',
   },
   {
     src: '/properties/Image_3.png',
+  },
+  {
+    src: '/properties/Image_4.png',
   },
   {
     src: '/properties/Image_1.png',
   },
   {
     src: '/properties/Image_2.png',
-  },
-  {
-    src: '/properties/Image_5.png',
   },
 ];
 ---
@@ -43,7 +43,7 @@ const galleryImages = [
         galleryImages.map((img) => (
           <div class="w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]">
             <ImageWithRatio
-              class="rounded-md shadow-[0_8px_30px_rgba(0,0,0,0.08)]"
+              class="rounded-[2px] shadow-[0_8px_30px_rgba(0,0,0,0.08)]"
               aspectRatio="4/3"
               src={img.src}
             />
