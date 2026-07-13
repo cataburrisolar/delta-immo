@@ -1,0 +1,58 @@
+---
+import { useTranslations, type Lang } from '../i18n/utils';
+import ImagePlaceholder from './ImagePlaceholder.astro';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+const details = [
+  { label: t('contact.addressLabel'), value: t('contact.address'), href: null },
+  { label: t('contact.phoneLabel'), value: t('contact.phone'), href: `tel:${t('contact.phone').replace(/\s+/g, '')}` },
+  { label: t('contact.emailLabel'), value: t('contact.email'), href: `mailto:${t('contact.email')}` },
+  { label: t('contact.hoursLabel'), value: t('contact.hours'), href: null },
+];
+---
+
+<section id="contact" class="scroll-mt-20 py-20 md:py-28">
+  <div class="mx-auto max-w-6xl px-6">
+    <div class="mx-auto max-w-2xl text-center">
+      <p class="mb-3 text-sm font-semibold uppercase tracking-widest text-carmine">
+        {t('contact.eyebrow')}
+      </p>
+      <h2 class="text-3xl md:text-4xl">{t('contact.title')}</h2>
+      <p class="mt-4 text-lg leading-relaxed text-secondary">{t('contact.subtitle')}</p>
+    </div>
+
+    <div class="mt-14 grid gap-10 md:grid-cols-2">
+      <dl class="grid gap-8 sm:grid-cols-2">
+        {
+          details.map((d) => (
+            <div>
+              <dt class="text-sm font-semibold uppercase tracking-wide text-carmine">
+                {d.label}
+              </dt>
+              <dd class="mt-2 whitespace-pre-line leading-relaxed text-slate">
+                {d.href ? (
+                  <a href={d.href} class="transition-colors hover:text-carmine">
+                    {d.value}
+                  </a>
+                ) : (
+                  d.value
+                )}
+              </dd>
+            </div>
+          ))
+        }
+      </dl>
+
+      <ImagePlaceholder
+        description={t('contact.mapPlaceholder')}
+        class="min-h-64 rounded-[12px]"
+      />
+    </div>
+  </div>
+</section>

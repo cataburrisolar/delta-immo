@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+/* Fonts (self-hosted via Fontsource, imported in Layout.astro) */
+
+/* ------------------------------------------------------------------ *
+ * Delta Immo brand theme — tokens mapped from brand.md
+ * Tailwind v4 is CSS-first: these tokens auto-generate utilities
+ * (e.g. --color-carmine -> bg-carmine / text-carmine / border-carmine).
+ * ------------------------------------------------------------------ */
+@theme {
+  /* Colors */
+  --color-carmine: #c70039; /* Primary CTA, links, active states, accents */
+  --color-carmine-dark: #a3002f; /* CTA hover */
+  --color-slate: #404e5c; /* Headers, nav, footer, primary text */
+  --color-offwhite: #f2f5f1; /* Page + section backgrounds, cards */
+  --color-sage: #d6e2d5; /* Occasional accent only */
+  --color-pearl: #b8b8b8; /* Borders, dividers, disabled */
+  --color-secondary: #666666; /* Secondary text */
+
+  /* Typography — see brand.md. "Nunito Sans Expanded" is unavailable;
+     approximated with Nunito Sans Bold + positive letter-spacing on headings. */
+  --font-heading: "Nunito Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+
+  /* Radii */
+  --radius-btn: 8px;
+  --radius-card: 12px;
+
+  /* Soft, subtle shadow (avoid heavy floating shadows) */
+  --shadow-soft: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* ------------------------------------------------------------------ *
+ * Base
+ * ------------------------------------------------------------------ */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-offwhite);
+  color: var(--color-slate);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: 0.02em; /* evokes the "Expanded" width */
+  color: var(--color-slate);
+  line-height: 1.15;
+}
+
+/* Reusable brand components */
+@layer components {
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: var(--color-carmine);
+    color: #ffffff;
+    font-weight: 600;
+    padding: 0.85rem 1.75rem;
+    border-radius: var(--radius-btn);
+    transition: background-color 0.2s ease;
+  }
+  .btn-primary:hover {
+    background-color: var(--color-carmine-dark);
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: transparent;
+    color: var(--color-slate);
+    font-weight: 600;
+    padding: 0.85rem 1.75rem;
+    border-radius: var(--radius-btn);
+    border: 1px solid var(--color-slate);
+    transition: all 0.2s ease;
+  }
+  .btn-secondary:hover {
+    background-color: var(--color-slate);
+    color: #ffffff;
+  }
+}

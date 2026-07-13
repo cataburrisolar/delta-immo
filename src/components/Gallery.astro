@@ -1,0 +1,55 @@
+---
+import { getTranslations, type Lang } from '../i18n/utils';
+import ImagePlaceholder from './ImagePlaceholder.astro';
+import ImageWithRatio from './ImageWithRatio.astro'
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const c = getTranslations(lang).gallery;
+
+const galleryImages = [
+  {
+    src: '/properties/Image_4.png',
+  },
+  {
+    src: '/properties/Image_3.png',
+  },
+  {
+    src: '/properties/Image_1.png',
+  },
+  {
+    src: '/properties/Image_2.png',
+  },
+  {
+    src: '/properties/Image_5.png',
+  },
+];
+---
+
+<section id="gallery" class="scroll-mt-20 bg-sage/30 py-20 md:py-28">
+  <div class="mx-auto max-w-6xl px-6">
+    <div class="mx-auto max-w-2xl text-center">
+      <p class="mb-3 text-sm font-semibold uppercase tracking-widest text-carmine">
+        {c.eyebrow}
+      </p>
+      <h2 class="text-3xl md:text-4xl">{c.title}</h2>
+      <p class="mt-4 text-lg leading-relaxed text-secondary">{c.subtitle}</p>
+    </div>
+
+    <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- {
+        c.items.map((item) => (
+          <ImagePlaceholder description={item.caption} class="aspect-[4/3] bg-offwhite" />
+        ))
+      } -->
+      {
+        galleryImages.map((img) => (
+          <ImageWithRatio class='rounded-md shadow-[0_8px_30px_rgba(0,0,0,0.08)]' aspectRatio='4/3' src={img.src}/>
+        ))
+      }
+    </div>
+  </div>
+</section>

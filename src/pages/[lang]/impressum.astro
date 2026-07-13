@@ -1,0 +1,30 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import {
+  getLangStaticPaths,
+  useTranslations,
+  defaultLang,
+  type Lang,
+} from '../../i18n/utils';
+
+export function getStaticPaths() {
+  return getLangStaticPaths();
+}
+
+const lang = (Astro.params.lang ?? defaultLang) as Lang;
+const t = useTranslations(lang);
+---
+
+<Layout
+  lang={lang}
+  title={t('meta.impressum.title')}
+  description={t('meta.impressum.description')}
+>
+  <section class="mx-auto max-w-3xl px-6 py-20 md:py-28">
+    <h1 class="text-3xl md:text-4xl">{t('impressum.title')}</h1>
+    <p class="mt-4 text-lg leading-relaxed text-secondary">{t('impressum.intro')}</p>
+    <div class="mt-8 rounded-[12px] border border-dashed border-pearl bg-sage/30 p-6 text-secondary">
+      {t('legal.placeholderNotice')}
+    </div>
+  </section>
+</Layout>

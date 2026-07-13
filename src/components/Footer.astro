@@ -1,0 +1,70 @@
+---
+import { useTranslations, localizePath, type Lang } from '../i18n/utils';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const home = localizePath(lang);
+const year = 2026;
+---
+
+<footer class="bg-slate text-offwhite">
+  <div class="mx-auto grid max-w-6xl gap-10 px-6 py-14 md:grid-cols-3">
+    <div>
+      <img
+        src="/delta-immo.svg"
+        alt="Delta Immo"
+        class="mb-4 h-9 w-auto brightness-0 invert"
+      />
+      <p class="max-w-xs text-sm leading-relaxed text-offwhite/70">
+        {t('footer.tagline')}
+      </p>
+    </div>
+
+    <div>
+      <h4 class="mb-3 text-sm font-semibold uppercase tracking-wide text-sage">
+        {t('footer.companyLabel')}
+      </h4>
+      <address class="text-sm not-italic leading-relaxed text-offwhite/70">
+        {t('footer.address')}
+      </address>
+      <p class="mt-2 text-sm text-offwhite/70">
+        <a href={`mailto:${t('contact.email')}`} class="transition-colors hover:text-sage">
+          {t('contact.email')}
+        </a>
+      </p>
+    </div>
+
+    <div>
+      <h4 class="mb-3 text-sm font-semibold uppercase tracking-wide text-sage">
+        {t('footer.legalTitle')}
+      </h4>
+      <ul class="space-y-2 text-sm text-offwhite/70">
+        <li>
+          <a href={localizePath(lang, 'impressum')} class="transition-colors hover:text-sage">
+            {t('nav.impressum')}
+          </a>
+        </li>
+        <li>
+          <a href={localizePath(lang, 'privacy-policy')} class="transition-colors hover:text-sage">
+            {t('nav.privacy')}
+          </a>
+        </li>
+        <li>
+          <a href={`${home}#contact`} class="transition-colors hover:text-sage">
+            {t('nav.contact')}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="border-t border-offwhite/10">
+    <div class="mx-auto max-w-6xl px-6 py-5 text-xs text-offwhite/50">
+      © {year} Delta Immo. {t('footer.rights')}
+    </div>
+  </div>
+</footer>

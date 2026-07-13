@@ -1,0 +1,39 @@
+---
+interface Props {
+  src: string;
+  aspectRatio: string; // e.g. "16 / 9", "4 / 3", "1 / 1"
+  imageRepeat?: string;
+  imagePosition?: string;
+  class?: string;
+}
+
+const {
+  src,
+  aspectRatio,
+  imageRepeat = "no-repeat",
+  imagePosition = "center center",
+  class: className = "",
+} = Astro.props;
+---
+
+<div
+  class={`image ${className}`}
+  style={`
+    --image-url: url('${src}');
+    --aspect-ratio: ${aspectRatio};
+    --image-repeat: ${imageRepeat};
+    --image-position: ${imagePosition};
+  `}
+/>
+
+<style>
+  .image {
+    width: 100%;
+    aspect-ratio: var(--aspect-ratio);
+
+    background-image: var(--image-url);
+    background-size: cover;
+    background-repeat: var(--image-repeat);
+    background-position: var(--image-position);
+  }
+</style>

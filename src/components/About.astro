@@ -1,0 +1,60 @@
+---
+import { getTranslations, type Lang } from '../i18n/utils';
+import ImagePlaceholder from './ImagePlaceholder.astro';
+import ImageWithRatio from './ImageWithRatio.astro'
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const c = getTranslations(lang).about;
+---
+
+<section id="about" class="scroll-mt-20 py-20 md:py-28">
+  <div class="mx-auto grid max-w-6xl items-center gap-12 px-6 md:grid-cols-2">
+    <div class="order-2 md:order-1">
+      <!-- <ImagePlaceholder
+        description={c.imagePlaceholder}
+        class="aspect-[4/5] shadow-[0_8px_30px_rgba(0,0,0,0.08)]"
+      /> -->
+      <ImageWithRatio class='rounded-md shadow-[0_8px_30px_rgba(0,0,0,0.08)]' 
+        aspectRatio='4/5' src='/people/happy-agent-in-front-of-house-cropped.jpg'/>
+
+    </div>
+
+    <div class="order-1 md:order-2">
+      <p class="mb-3 text-sm font-semibold uppercase tracking-widest text-carmine">
+        {c.eyebrow}
+      </p>
+      <h2 class="text-3xl md:text-4xl">{c.title}</h2>
+      <div class="mt-6 space-y-4 text-lg leading-relaxed text-secondary">
+        {c.paragraphs.map((p) => <p>{p}</p>)}
+      </div>
+      <ul class="mt-8 space-y-3">
+        {
+          c.points.map((point) => (
+            <li class="flex items-start gap-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="mt-0.5 shrink-0 text-carmine"
+                aria-hidden="true"
+              >
+                <path d="m5 12 5 5L20 7" />
+              </svg>
+              <span class="text-slate">{point}</span>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</section>

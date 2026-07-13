@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "home": {
+      "title": "Delta Immo — Immobilier durable en Suisse",
+      "description": "Delta Immo accompagne la vente d'appartements et de maisons durables et écoénergétiques en Suisse. Expertise, confiance et engagement pour un habitat responsable."
+    },
+    "impressum": {
+      "title": "Mentions légales — Delta Immo",
+      "description": "Mentions légales de Delta Immo."
+    },
+    "privacy": {
+      "title": "Politique de confidentialité — Delta Immo",
+      "description": "Politique de confidentialité de Delta Immo."
+    }
+  },
+  "nav": {
+    "about": "À propos",
+    "values": "Nos valeurs",
+    "gallery": "Réalisations",
+    "contact": "Contact",
+    "impressum": "Mentions légales",
+    "privacy": "Confidentialité",
+    "cta": "Nous contacter"
+  },
+  "hero": {
+    "eyebrow": "Immobilier durable",
+    "title": "Un habitat qui a du sens, aujourd'hui et demain",
+    "subtitle": "Delta Immo vend des appartements et des maisons pensés pour durer : performants sur le plan énergétique, respectueux de l'environnement et conçus pour préserver leur valeur dans le temps.",
+    "ctaPrimary": "Prendre contact",
+    "ctaSecondary": "Découvrir notre approche",
+    "imagePlaceholder": "Image plein cadre : maison suisse moderne aux lignes épurées, panneaux solaires en toiture, sous un ciel bleu et une lumière naturelle."
+  },
+  "intro": {
+    "title": "Une agence immobilière engagée pour un habitat responsable",
+    "text": "Nous croyons qu'un bien immobilier n'est pas seulement un lieu de vie, mais un investissement de long terme pour ses habitants comme pour la planète. C'est pourquoi nous sélectionnons et accompagnons la vente de biens durables, sobres en énergie et bâtis pour traverser les décennies."
+  },
+  "values": {
+    "eyebrow": "Ce qui nous guide",
+    "title": "Nos valeurs",
+    "subtitle": "Une exigence constante de qualité, de durabilité et de transparence à chaque étape.",
+    "items": [
+      {
+        "title": "Durabilité",
+        "description": "Nous privilégions des constructions écoénergétiques, saines et pérennes, qui réduisent leur empreinte tout en préservant leur valeur."
+      },
+      {
+        "title": "Confiance",
+        "description": "Un accompagnement transparent et honnête, du premier échange à la signature, sans jargon ni promesses excessives."
+      },
+      {
+        "title": "Expertise",
+        "description": "Une connaissance fine du marché suisse et des enjeux techniques et énergétiques de chaque bien que nous proposons."
+      },
+      {
+        "title": "Engagement",
+        "description": "Un investissement réel dans des projets responsables, au service de nos clients et des générations futures."
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "À propos de Delta Immo",
+    "title": "Spécialiste des biens durables et écoénergétiques",
+    "paragraphs": [
+      "Delta Immo est une agence immobilière suisse spécialisée dans la vente d'appartements et de maisons à haute performance énergétique. Notre conviction est simple : l'immobilier de demain sera durable, ou ne sera pas.",
+      "Nous sélectionnons avec soin des biens conçus pour durer, alliant confort de vie, sobriété énergétique et qualité de construction. Chaque projet que nous accompagnons répond à des critères exigeants en matière d'efficacité énergétique et de respect de l'environnement."
+    ],
+    "points": [
+      "Biens à haute efficacité énergétique",
+      "Matériaux sains et construction de qualité",
+      "Accompagnement personnalisé à la vente",
+      "Vision long terme et préservation de la valeur"
+    ],
+    "imagePlaceholder": "Image : ingénieur ou conseiller souriant devant un immeuble résidentiel moderne et écologique, ambiance lumineuse et professionnelle."
+  },
+  "gallery": {
+    "eyebrow": "Réalisations",
+    "title": "Un aperçu de notre univers",
+    "subtitle": "Des biens de caractère, dans le style suisse contemporain, pensés pour bien vieillir.",
+    "items": [
+      { "caption": "Villa contemporaine suisse à ossature bois, entourée de verdure." },
+      { "caption": "Appartement lumineux aux grandes baies vitrées et finitions naturelles." },
+      { "caption": "Résidence moderne équipée de panneaux solaires et d'une pompe à chaleur." },
+      { "caption": "Chalet rénové alliant charme alpin et haute performance énergétique." },
+      { "caption": "Immeuble résidentiel basse consommation dans un quartier verdoyant." },
+      { "caption": "Intérieur épuré et chaleureux baigné de lumière naturelle." }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Parlons de votre projet",
+    "subtitle": "Une question, un projet de vente ou d'achat ? Notre équipe vous répond avec plaisir.",
+    "addressLabel": "Adresse",
+    "address": "Delta Immo\n[Rue et numéro]\n[NPA] [Ville], Suisse",
+    "phoneLabel": "Téléphone",
+    "phone": "+41 00 000 00 00",
+    "emailLabel": "E-mail",
+    "email": "contact@delta-immo.ch",
+    "hoursLabel": "Horaires",
+    "hours": "Lun – Ven : 9h00 – 18h00",
+    "mapPlaceholder": "Image / carte : localisation des bureaux de Delta Immo."
+  },
+  "footer": {
+    "tagline": "Immobilier durable et écoénergétique en Suisse.",
+    "companyLabel": "Delta Immo",
+    "address": "[Rue et numéro], [NPA] [Ville], Suisse",
+    "rights": "Tous droits réservés.",
+    "legalTitle": "Informations légales"
+  },
+  "legal": {
+    "placeholderNotice": "Cette page est un espace réservé. Son contenu sera complété prochainement."
+  },
+  "impressum": {
+    "title": "Mentions légales",
+    "intro": "Informations légales concernant Delta Immo."
+  },
+  "privacy": {
+    "title": "Politique de confidentialité",
+    "intro": "Informations relatives au traitement de vos données personnelles."
+  }
+}

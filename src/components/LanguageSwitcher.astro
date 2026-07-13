@@ -1,0 +1,45 @@
+---
+import { languages, type Lang } from '../i18n/utils';
+
+interface Props {
+  lang: Lang;
+  /** Colour tone for the surface it sits on. */
+  tone?: 'onLight' | 'onDark';
+}
+
+const { lang, tone = 'onLight' } = Astro.props;
+
+// Preserve the current page when switching languages by swapping the prefix.
+const path = Astro.url.pathname;
+const rest = path.replace(/^\/(fr|de)(?=\/|$)/, '');
+
+const codes = Object.keys(languages) as Lang[];
+
+const separator = tone === 'onDark' ? 'text-offwhite/40' : 'text-pearl';
+const active = tone === 'onDark' ? 'text-white font-semibold' : 'text-carmine font-semibold';
+const inactive =
+  tone === 'onDark'
+    ? 'text-offwhite/70 hover:text-white'
+    : 'text-secondary hover:text-slate';
+---
+
+<div class="flex items-center gap-1 text-sm font-medium" aria-label="Language selector">
+  {
+    codes.map((code, i) => (
+      <>
+        {i > 0 && <span class={separator}>/</span>}
+        <a
+          href={`/${code}${rest || '/'}`}
+          hreflang={code}
+          class:list={[
+            'rounded px-1.5 py-0.5 uppercase transition-colors',
+            code === lang ? active : inactive,
+          ]}
+          aria-current={code === lang ? 'true' : undefined}
+        >
+          {code}
+        </a>
+      </>
+    ))
+  }
+</div>
