@@ -5,17 +5,30 @@ description: Impressum von Delta Immo.
 
 # Impressum
 
-Rechtliche Angaben zu Delta Immo.
+## Betreiber der Website
 
-## Herausgeber
-
-Delta Immo\
+[DELTA IMMO]\
 Erlenstrasse 48\
-2555 Brügg BE, Schweiz
-
-## Kontakt
+2555 Brügg BE\
+Schweiz
+> Todo: add company name
 
 E-Mail: contact@delta-immo.swiss\
 Telefon: +41 79 782 58 54
 
-> Diese Seite ist ein Platzhalter. Die vollständigen rechtlichen Angaben werden in Kürze ergänzt.
+Sofern im Schweizer Handelsregister eingetragen:\
+Firma: [DELTA IMMO]\
+UID / CHE-Nummer: CHE-XXX.XXX.XXX
+> Todo: add company name and CHE-XXX.XXX.XXX
+
+Mehrwertsteuernummer: CHE-XXX.XXX.XXX
+> Todo: add company name and CHE-XXX.XXX.XXX
+
+## Verantwortlich für den Inhalt der Website
+
+[DELTA IMMO]
+
+Kontakt
+
+Für Anfragen zu dieser Website oder deren Inhalt kontaktieren Sie uns bitte unter:
+contact@delta-immo.swiss
