@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 /* Fonts (self-hosted via Fontsource, imported in Layout.astro) */
 

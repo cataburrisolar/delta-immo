@@ -18,7 +18,7 @@
     "values": "Nos valeurs",
     "gallery": "Réalisations",
     "contact": "Contact",
-    "impressum": "Mentions légales",
+    "impressum": "Impressum",
     "privacy": "Confidentialité",
     "cta": "Nous contacter"
   },
@@ -110,7 +110,7 @@
     "placeholderNotice": "Cette page est un espace réservé. Son contenu sera complété prochainement."
   },
   "impressum": {
-    "title": "Mentions légales",
+    "title": "Impressum",
     "intro": "Informations légales concernant Delta Immo."
   },
   "privacy": {

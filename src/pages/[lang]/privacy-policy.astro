@@ -1,4 +1,5 @@
 ---
+import type { MarkdownInstance } from 'astro';
 import Layout from '../../layouts/Layout.astro';
 import {
   getLangStaticPaths,
@@ -13,18 +14,24 @@ export function getStaticPaths() {
 
 const lang = (Astro.params.lang ?? defaultLang) as Lang;
 const t = useTranslations(lang);
+
+const pages = import.meta.glob<MarkdownInstance<Record<string, any>>>(
+  '../../legal/privacy-policy.*.md',
+  { eager: true }
+);
+const entry = pages[`../../legal/privacy-policy.${lang}.md`];
+if (!entry) throw new Error(`Missing legal content: privacy-policy.${lang}.md`);
+const { Content, frontmatter } = entry;
 ---
 
 <Layout
   lang={lang}
-  title={t('meta.privacy.title')}
-  description={t('meta.privacy.description')}
+  title={frontmatter.title ?? t('meta.privacy.title')}
+  description={frontmatter.description ?? t('meta.privacy.description')}
 >
   <section class="mx-auto max-w-3xl px-6 py-20 md:py-28">
-    <h1 class="text-3xl md:text-4xl">{t('privacy.title')}</h1>
-    <p class="mt-4 text-lg leading-relaxed text-secondary">{t('privacy.intro')}</p>
-    <div class="mt-8 rounded-[2px] border border-dashed border-pearl bg-sage/30 p-6 text-secondary">
-      {t('legal.placeholderNotice')}
-    </div>
+    <article class="prose prose-slate max-w-none prose-blockquote:border-carmine prose-blockquote:text-secondary prose-a:text-carmine">
+      <Content />
+    </article>
   </section>
 </Layout>
