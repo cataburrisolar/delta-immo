@@ -1,0 +1,111 @@
+---
+interface Props {
+  /** Latitude of the pin. */
+  lat: number;
+  /** Longitude of the pin. */
+  long: number;
+  /** Label shown on top of the pin. */
+  text: string;
+  /** Initial zoom level. */
+  zoom?: number;
+  /** Extra classes for sizing / rounding. */
+  class?: string;
+}
+
+const { lat, long, text, zoom = 15, class: className = '' } = Astro.props;
+---
+
+<div
+  class:list={['relative w-full overflow-hidden', className]}
+  data-map-with-pin
+  data-lat={lat}
+  data-long={long}
+  data-zoom={zoom}
+  data-text={text}
+>
+</div>
+
+<script>
+  import maplibregl from 'maplibre-gl';
+  import 'maplibre-gl/dist/maplibre-gl.css';
+
+  // Brand accent color (carmine) — see brand.md / global.css --color-carmine.
+  const ACCENT = '#c70039';
+
+  function buildMarker(text: string): HTMLElement {
+    const el = document.createElement('div');
+    el.style.cssText =
+      'display:flex;flex-direction:column;align-items:center;pointer-events:none;';
+
+    const label = document.createElement('div');
+    label.textContent = text;
+    label.style.cssText = [
+      `background:${ACCENT}`,
+      'color:#fff',
+      'font-family:Montserrat,ui-sans-serif,system-ui,sans-serif',
+      'font-size:12px',
+      'font-weight:600',
+      'line-height:1',
+      'padding:6px 10px',
+      'border-radius:9999px',
+      'white-space:nowrap',
+      'box-shadow:0 8px 30px rgba(0,0,0,.15)',
+      'margin-bottom:6px',
+    ].join(';');
+
+    const pin = document.createElement('div');
+    pin.style.cssText = 'line-height:0;filter:drop-shadow(0 3px 3px rgba(0,0,0,.25));';
+    pin.innerHTML =
+      `<svg width="34" height="34" viewBox="0 0 24 24" fill="${ACCENT}" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">` +
+      '<path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>' +
+      '<circle cx="12" cy="9" r="2.6" fill="#fff"/>' +
+      '</svg>';
+
+    el.append(label, pin);
+    return el;
+  }
+
+  function initMap(container: HTMLElement) {
+    const lat = Number(container.dataset.lat);
+    const long = Number(container.dataset.long);
+    const zoom = Number(container.dataset.zoom ?? 15);
+    const text = container.dataset.text ?? '';
+    if (Number.isNaN(lat) || Number.isNaN(long)) return;
+
+    const map = new maplibregl.Map({
+      container,
+      center: [long, lat],
+      zoom,
+      attributionControl: { compact: true },
+      style: {
+        version: 8,
+        sources: {
+          osm: {
+            type: 'raster',
+            tiles: [
+              'https://a.tile.openstreetmap.org/{z}/{x}/{y}.png',
+              'https://b.tile.openstreetmap.org/{z}/{x}/{y}.png',
+              'https://c.tile.openstreetmap.org/{z}/{x}/{y}.png',
+            ],
+            tileSize: 256,
+            maxzoom: 19,
+            attribution: '&copy; OpenStreetMap contributors',
+          },
+        },
+        layers: [{ id: 'osm', type: 'raster', source: 'osm' }],
+      },
+    });
+
+    map.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-right');
+    // Avoid hijacking page scroll; users can still drag and use the zoom buttons.
+    // map.scrollZoom.disable();
+
+    new maplibregl.Marker({ element: buildMarker(text), anchor: 'bottom' })
+      .setLngLat([long, lat])
+      .addTo(map);
+  }
+
+  document
+    .querySelectorAll<HTMLElement>('[data-map-with-pin]')
+    .forEach((el) => initMap(el));
+</script>

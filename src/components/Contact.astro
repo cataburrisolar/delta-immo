@@ -1,6 +1,9 @@
 ---
 import { useTranslations, type Lang } from '../i18n/utils';
-import ImagePlaceholder from './ImagePlaceholder.astro';
+import MapWithPin from './MapWithPin.astro';
+
+// Placeholder location (Lausanne, CH) — update to the real office coordinates.
+const office = { lat: 47.120397966029685, long: 7.261291145764269 };
 
 interface Props {
   lang: Lang;
@@ -49,9 +52,11 @@ const details = [
         }
       </dl>
 
-      <ImagePlaceholder
-        description={t('contact.mapPlaceholder')}
-        class="min-h-64 rounded-[12px]"
+      <MapWithPin
+        lat={office.lat}
+        long={office.long}
+        text="Delta Immo"
+        class="h-full min-h-80 rounded-[12px] shadow-[0_8px_30px_rgba(0,0,0,0.08)]"
       />
     </div>
   </div>
