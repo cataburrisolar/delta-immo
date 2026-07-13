@@ -90,11 +90,11 @@
     "title": "Parlons de votre projet",
     "subtitle": "Une question, un projet de vente ou d'achat ? Notre équipe vous répond avec plaisir.",
     "addressLabel": "Adresse",
-    "address": "Delta Immo\n[Rue et numéro]\n[NPA] [Ville], Suisse",
+    "address": "Delta Immo\nErlenstrasse 48\n2555 Brügg BE, Suisse",
     "phoneLabel": "Téléphone",
-    "phone": "+41 00 000 00 00",
+    "phone": "+41 79 782 58 54",
     "emailLabel": "E-mail",
-    "email": "contact@delta-immo.ch",
+    "email": "contact@delta-immo.swiss",
     "hoursLabel": "Horaires",
     "hours": "Lun – Ven : 9h00 – 18h00",
     "mapPlaceholder": "Image / carte : localisation des bureaux de Delta Immo."
@@ -102,7 +102,7 @@
   "footer": {
     "tagline": "Immobilier durable et écoénergétique en Suisse.",
     "companyLabel": "Delta Immo",
-    "address": "[Rue et numéro], [NPA] [Ville], Suisse",
+    "address": "Erlenstrasse 48, 2555 Brügg BE, Suisse",
     "rights": "Tous droits réservés.",
     "legalTitle": "Informations légales"
   },
