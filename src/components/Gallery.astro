@@ -9,22 +9,18 @@ interface Props {
 const { lang } = Astro.props;
 const c = getTranslations(lang).gallery;
 
+import Image_1 from '../assets/properties/Image_1.png'
+import Image_2 from '../assets/properties/Image_2.png'
+import Image_3 from '../assets/properties/Image_3.png'
+import Image_4 from '../assets/properties/Image_4.png'
+import Image_5 from '../assets/properties/Image_5.png'
+
 const galleryImages = [
-  {
-    src: '/properties/Image_5.png',
-  },
-  {
-    src: '/properties/Image_3.png',
-  },
-  {
-    src: '/properties/Image_4.png',
-  },
-  {
-    src: '/properties/Image_1.png',
-  },
-  {
-    src: '/properties/Image_2.png',
-  },
+  {imageData: Image_5},
+  {imageData: Image_3},
+  {imageData: Image_4},
+  {imageData: Image_1},
+  {imageData: Image_2},
 ];
 ---
 
@@ -45,7 +41,8 @@ const galleryImages = [
             <ImageWithRatio
               class="rounded-[2px] shadow-[0_8px_30px_rgba(0,0,0,0.08)]"
               aspectRatio="4/3"
-              src={img.src}
+              imageData={img.imageData}
+              widths={[1080, 350]}
             />
           </div>
         ))

@@ -1,0 +1,61 @@
+---
+import { languages, type Lang } from '../i18n/utils';
+
+
+interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  canonical?: string;
+  noindex?: boolean;
+}
+
+const {
+  title,
+  description,
+  image = "/og-image.jpg",
+  canonical,
+  noindex = false,
+} = Astro.props;
+
+const siteUrl = "https://example.com";
+
+const canonicalURL = canonical 
+  ? new URL(canonical, siteUrl)
+  : Astro.url;
+
+// Build hreflang alternates by swapping the locale segment of the current path.
+const path = Astro.url.pathname;
+const rest = path.replace(/^\/(fr|de)(?=\/|$)/, '');
+const alternates = (Object.keys(languages) as Lang[]).map((code) => ({
+  code,
+  href: `/${code}${rest || '/'}`,
+}));
+---
+
+<title>{title}</title>
+<meta name="description" content={description} />
+{
+  alternates.map((alt) => (
+    <link rel="alternate" hreflang={alt.code} href={alt.href} />
+  ))
+}
+
+<link rel="canonical" href={canonicalURL} />
+
+{noindex && (
+  <meta name="robots" content="noindex,nofollow" />
+)}
+
+<!-- Open Graph -->
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:type" content="website" />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:image" content={new URL(image, siteUrl)} />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={new URL(image, siteUrl)} />
