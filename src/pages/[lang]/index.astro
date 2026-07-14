@@ -4,6 +4,7 @@ import Hero from '../../components/Hero.astro';
 import Values from '../../components/Values.astro';
 import About from '../../components/About.astro';
 import Gallery from '../../components/Gallery.astro';
+import Locations from '../../components/Locations.astro';
 import Contact from '../../components/Contact.astro';
 import {
   getLangStaticPaths,
@@ -33,5 +34,6 @@ const t = useTranslations(lang);
   <About lang={lang} />
   <Values lang={lang} />
   <Gallery lang={lang} />
+  <Locations lang={lang} />
   <Contact lang={lang} />
 </Layout>

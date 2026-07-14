@@ -85,6 +85,13 @@
       { "caption": "Klares, warmes Interieur, durchflutet von natürlichem Licht." }
     ]
   },
+  "locations": {
+    "eyebrow": "Unsere Präsenz",
+    "title": "In der ganzen Schweiz präsent",
+    "subtitle": "Projekte und Teams in Ihrer Nähe – von der Deutschschweiz bis in die Romandie.",
+    "cities": ["Hergiswil", "Biel", "Sion", "Zürich"],
+    "imageAlt": "Karte der Schweiz mit den Standorten von Delta Immo: Hergiswil, Biel, Sion und Zürich."
+  },
   "contact": {
     "eyebrow": "Kontakt",
     "title": "Sprechen wir über Ihr Vorhaben",

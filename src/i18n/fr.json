@@ -85,6 +85,13 @@
       { "caption": "Intérieur épuré et chaleureux baigné de lumière naturelle." }
     ]
   },
+  "locations": {
+    "eyebrow": "Notre présence",
+    "title": "Présents dans toute la Suisse",
+    "subtitle": "Des projets et des équipes au plus près de vous, de la Suisse alémanique à la Romandie.",
+    "cities": ["Hergiswil", "Bienne", "Sion", "Zürich"],
+    "imageAlt": "Carte de la Suisse indiquant les implantations de Delta Immo : Hergiswil, Bienne, Sion et Zürich."
+  },
   "contact": {
     "eyebrow": "Contact",
     "title": "Parlons de votre projet",
