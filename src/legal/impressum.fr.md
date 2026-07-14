@@ -7,26 +7,23 @@ description: Mentions légales de Delta Immo.
 
 ## Exploitant du site web
 
-[DELTA IMMO]\
-Erlenstrasse 48\
-2555 Brügg BE\
+Delta Energy AG\
+Landweg 1\
+6052 Hergiswil\
 Suisse
-> Todo: add company name
 
 E-mail : contact@delta-immo.swiss\
-Téléphone : +41 79 782 58 54
+Téléphone : 058 255 01 58
 
 Si inscrit au registre du commerce suisse :\
-Raison sociale : [DELTA IMMO]\
-Numéro IDE / CHE : CHE-XXX.XXX.XXX
-> Todo: add company name and CHE-XXX.XXX.XXX
+Raison sociale : Delta Energy AG\
+Numéro IDE / CHE : CHE-284.604.771
 
-Numéro de TVA: CHE-XXX.XXX.XXX
-> Todo: add company name and CHE-XXX.XXX.XXX
+Numéro de TVA: CHE-284.604.771
 
 ## Responsable du contenu du site web
 
-[DELTA IMMO]
+Delta Energy AG
 
 Contact
 

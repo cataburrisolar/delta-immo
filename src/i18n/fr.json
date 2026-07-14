@@ -90,9 +90,9 @@
     "title": "Parlons de votre projet",
     "subtitle": "Une question, un projet de vente ou d'achat ? Notre équipe vous répond avec plaisir.",
     "addressLabel": "Adresse",
-    "address": "Delta Immo\nErlenstrasse 48\n2555 Brügg BE, Suisse",
+    "address": "Delta Immo\nUne marque de Delta Energy SA\n\nLandweg 1\n6052 Hergiswil, Suisse",
     "phoneLabel": "Téléphone",
-    "phone": "+41 79 782 58 54",
+    "phone": "058 255 01 58",
     "emailLabel": "E-mail",
     "email": "contact@delta-immo.swiss",
     "hoursLabel": "Horaires",
@@ -101,8 +101,8 @@
   },
   "footer": {
     "tagline": "Immobilier durable et écoénergétique en Suisse.",
-    "companyLabel": "Delta Immo",
-    "address": "Erlenstrasse 48, 2555 Brügg BE, Suisse",
+    "companyLabel": "Delta Immo, une marque de Delta Energy SA",
+    "address": "Landweg 1, 6052 Hergiswil, Suisse",
     "rights": "Tous droits réservés.",
     "legalTitle": "Informations légales"
   },

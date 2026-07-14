@@ -8,19 +8,17 @@ description: Datenschutzerklärung von Delta Immo.
 Letzte Aktualisierung: 13.07.2026
 
 Diese Datenschutzerklärung erläutert, wie personenbezogene Daten erhoben und verarbeitet werden, wenn Sie https://delta-immo.swiss/ (die „Website“) besuchen.
-Die Website wird von [DELTA IMMO] („wir“, „uns“, „unser“) betrieben.
-> Todo: add company name
+Die Website wird von Delta Energy AG („wir“, „uns“, „unser“) betrieben.
 
 Wir verarbeiten personenbezogene Daten in Übereinstimmung mit dem Schweizer Bundesgesetz über den Datenschutz (DSG).
 ## 1. Verantwortlicher für die Verarbeitung
 
 Die für die Verarbeitung der Daten auf dieser Website verantwortliche Stelle ist:
 
-[DELTA IMMO]\
-Erlenstrasse 48\
-2555 Brügg BE\
+Delta Energy AG\
+Landweg 1\
+6052 Hergiswil\
 Schweiz
-> Todo: add company name
 
 
 E-Mail: contact@delta-immo.swiss

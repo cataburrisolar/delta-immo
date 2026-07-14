@@ -8,19 +8,17 @@ description: Politique de confidentialité de Delta Immo.
 Dernière mise à jour : 13.07.2026
 
 Cette Politique de confidentialité explique comment les données personnelles sont collectées et traitées lorsque vous visitez https://delta-immo.swiss/ (le « Site web »).
-Le Site web est exploité par [DELTA IMMO] (« nous », « notre », « nos »).
-> Todo: add company name
+Le Site web est exploité par Delta Energy AG (« nous », « notre », « nos »).
 
 Nous traitons les données personnelles conformément à la loi fédérale suisse sur la protection des données (LPD).
 ## 1. Responsable du traitement
 
 L’entité responsable du traitement des données sur ce site web est :
 
-[DELTA IMMO]\
-Erlenstrasse 48\
-2555 Brügg BE\
+Delta Energy AG\
+Landweg 1\
+6052 Hergiswil\
 Suisse
-> Todo: add company name
 
 
 E-mail : contact@delta-immo.swiss
